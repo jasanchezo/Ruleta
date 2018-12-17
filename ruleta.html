@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Ruleta</title>
+    
+    <link rel="stylesheet" href="vendors/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        
+        
+            <h1 class="text-center">La ruleta de la suerte!!!!</h1>
+        
+        
+        <div class="jumbotron">
+	       <div class="container">
+	       
+	           <div class="container">
+                   <div class="col-sm-6">
+                   <h1 class="mensaje">Inicio</h1>
+                   <br>
+                   <button id="btnGenerar" class="btn-lg btn-primary">Girar la Ruleta</button>
+	               </div>
+	               
+	               <div class="col-sm-6">
+                   <img src="img/ruleta.jpg" class="img-responsive" alt="">
+	               </div>
+	           </div>
+	           
+		    
+	       </div>
+        </div>
+
+        
+    </div>
+    
+    
+    <script src="vendors/jquery-3.2.1/jquery-3.2.1.min.js"></script>
+    <script src="vendors/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            
+            var alumnos = ['Eduardo', 'Julia', 'Fernando', 'Joel','Jesus','Alex', 'Diego', 'Caballero', 'Alejandro'];
+            var tmp = -1;
+            $('#btnGenerar').click(function(){
+                
+                while(true){
+                    random = Math.floor(Math.random()* 9);
+                    if(random != tmp) break;
+                        
+                    
+                }
+                tmp = random;
+                $('.mensaje').text(alumnos[random]);
+                
+                
+            });
+        });
+    
+    
+    </script>
+    
+</body>
+</html>
